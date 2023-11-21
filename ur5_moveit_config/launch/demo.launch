@@ -11,6 +11,9 @@
   <!-- By default, we are not in debug mode -->
   <arg name="debug" default="false" />
 
+  <!-- Set execution mode for fake execution controllers -->
+  <arg name="fake_execution_type" default="interpolate" />
+
   <!-- By default, we will load or override the robot_description -->
   <arg name="load_robot_description" default="true"/>
 

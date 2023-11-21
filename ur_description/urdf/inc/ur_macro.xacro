@@ -317,7 +317,23 @@
     </joint>
 
     <!-- ROS-Industrial 'flange' frame: attachment point for EEF models -->
-    <link name="${prefix}flange" />
+    <link name="${prefix}flange" >
+      <visual>
+        <origin xyz="0.065 0.05 -0.05" rpy="0 0 -1.5707"/>
+        <geometry>
+          <mesh filename="package://ur_manipulation/meshes/hand.STL"/>
+        </geometry>
+        <material name="">
+          <color rgba="0.79216 0.81961 0.93333 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="0.065 0.05 -0.05" rpy="0 0 -1.5707"/>
+        <geometry>
+          <mesh filename="package://ur_manipulation/meshes/hand.STL"/>
+        </geometry>
+      </collision>
+    </link>
     <joint name="${prefix}wrist_3-flange" type="fixed">
       <parent link="${prefix}wrist_3_link" />
       <child link="${prefix}flange" />
